@@ -54,6 +54,7 @@ public class BattleshipTurns implements Runnable{
             Scanner s = new Scanner(System.in);
             System.out.print("What is the IP address you are trying to connect to? " );
             InetAddress host = InetAddress.getByName(s.next());
+            s.close();
             socket = new Socket(host.getHostName(), port);
             System.out.println("Client connected to Server");
             //Create input and output threads
